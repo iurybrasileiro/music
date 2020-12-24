@@ -1,8 +1,11 @@
+import 'react-native-gesture-handler';
+
 import React, { FC } from 'react';
-import { View } from 'react-native';
+
+import Navigation from './navigation';
 
 const App: FC = () => {
-  return <View />;
+  return <Navigation />;
 };
 
 export default App;
