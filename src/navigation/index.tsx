@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import Icon from 'react-native-vector-icons/Feather';
 import { useTheme } from 'styled-components';
 
 import { NavigationContainer } from '@react-navigation/native';
