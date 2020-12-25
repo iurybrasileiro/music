@@ -8,6 +8,11 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secundary: string;
+
+      input: {
+        color: string;
+        placeholder: string;
+      };
     };
   }
 }

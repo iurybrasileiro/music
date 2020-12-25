@@ -19,10 +19,13 @@ export const Content = styled(Animated.View)`
   border-radius: 4px;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.TextInput.attrs(({ theme }) => ({
+  placeholderTextColor: theme.colors.input.placeholder,
+}))`
   flex: 1;
   height: 50px;
 
+  color: ${({ theme }) => theme.colors.input.color}
   font-size: 18px;
 
   border-radius: 4px;
