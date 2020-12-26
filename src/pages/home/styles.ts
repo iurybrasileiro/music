@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
 import { Dimensions, FlatList } from 'react-native';
 
-export const Container = styled.ScrollView`
+export const Container = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+})`
   flex: 1;
 
   padding: 8px 14px;
@@ -13,7 +15,7 @@ export const ListTitle = styled.Text`
 
   font-size: 24px;
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.secundary};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const AlbumsList = styled(FlatList as new () => FlatList<any>).attrs({
@@ -46,10 +48,10 @@ export const AlbumImage = styled.View`
 export const AlbumTitle = styled.Text`
   font-size: 16px;
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.secundary};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const AlbumArtistName = styled.Text`
   font-size: 10px;
-  color: ${({ theme }) => theme.colors.secundary};
+  color: ${({ theme }) => theme.colors.text.secundary};
 `;

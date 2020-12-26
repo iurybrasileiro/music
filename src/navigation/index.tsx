@@ -26,7 +26,13 @@ const Navigation: FC = () => {
               screenOptions={{
                 header: () => (
                   <Header
-                    left={() => <Icon name="menu" size={30} color="#fff" />}
+                    left={() => (
+                      <Icon
+                        name="menu"
+                        size={30}
+                        color={theme.colors.secundary}
+                      />
+                    )}
                     right={() => <SearchBar />}
                   />
                 ),

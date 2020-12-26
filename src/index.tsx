@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 
 import React, { FC } from 'react';
+import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
-import { StatusBar } from 'react-native';
 import dark from '~/global/theme/dark';
 
 import Navigation from '~/navigation';

@@ -13,6 +13,11 @@ declare module 'styled-components' {
         color: string;
         placeholder: string;
       };
+
+      text: {
+        primary: string;
+        secundary: string;
+      };
     };
   }
 }
