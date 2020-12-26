@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { useEffect, FC } from 'react';
+import RNBootSplash from 'react-native-bootsplash';
 
 import Player from '~/components/Player';
 import strings from '~/global/strings';
@@ -14,6 +15,12 @@ import {
 } from './styles';
 
 const Home: FC = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      RNBootSplash.hide({ fade: true });
+    }, 1000);
+  }, []);
+
   return (
     <>
       <Container>
