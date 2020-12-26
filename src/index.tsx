@@ -1,23 +1,21 @@
 import 'react-native-gesture-handler';
 
 import React, { FC } from 'react';
-import { StatusBar } from 'react-native';
-import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import dark from '~/global/theme/dark';
+import { store, persistor } from '~/store';
 
-import Navigation from '~/navigation';
+import App from './App';
 
-const App: FC = () => {
+const Main: FC = () => {
   return (
-    <ThemeProvider theme={dark}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={dark.colors.primary}
-      />
-      <Navigation />
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
   );
 };
 
-export default App;
+export default Main;
