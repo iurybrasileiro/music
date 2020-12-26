@@ -1,8 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 
+import { StackHeaderProps } from '@react-navigation/stack';
+
 import { Container } from './styles';
 
-interface IHeaderProps {
+interface IHeaderProps extends StackHeaderProps {
   left?: () => ReactNode;
   right?: () => ReactNode;
 }

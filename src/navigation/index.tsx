@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import Icon from 'react-native-vector-icons/Feather';
 import { useTheme } from 'styled-components';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -11,6 +10,9 @@ import SearchBar from '~/components/SearchBar';
 
 import Home from '~/pages/home';
 
+import DrawerContent from './components/DrawerContent';
+import HamburgerButton from './components/HamburgerButton';
+
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
@@ -19,20 +21,15 @@ const Navigation: FC = () => {
 
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
+      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
         <Drawer.Screen name="Main">
           {() => (
             <Stack.Navigator
               screenOptions={{
-                header: () => (
+                header: props => (
                   <Header
-                    left={() => (
-                      <Icon
-                        name="menu"
-                        size={30}
-                        color={theme.colors.secundary}
-                      />
-                    )}
+                    {...props}
+                    left={() => <HamburgerButton />}
                     right={() => <SearchBar />}
                   />
                 ),

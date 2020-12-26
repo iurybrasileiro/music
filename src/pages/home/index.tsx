@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import Player from '~/components/Player';
 import strings from '~/global/strings';
 
