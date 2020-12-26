@@ -1,16 +1,21 @@
 import React, { FC } from 'react';
 import { StatusBar } from 'react-native';
+import { useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
-import dark from '~/global/theme/dark';
+import { theme } from '~/global/theme';
 import Navigation from '~/navigation';
 
+import ApplicationState from './store/ApplicationState';
+
 const App: FC = () => {
+  const { mode } = useSelector((store: ApplicationState) => store.settings);
+
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={theme[mode]}>
       <StatusBar
-        barStyle="light-content"
-        backgroundColor={dark.colors.primary}
+        barStyle={mode === 'dark' ? 'light-content' : 'dark-content'}
+        backgroundColor={theme[mode].colors.primary}
       />
       <Navigation />
     </ThemeProvider>

@@ -28,6 +28,7 @@
   ],
   "rules": {
     "react/prop-types": "off",
+    "no-shadow": "off",
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-props-no-spreading": "off",
     "react-hooks/exhaustive-deps": "warn",
