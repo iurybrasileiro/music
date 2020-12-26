@@ -1,7 +1,14 @@
-import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { darken } from 'polished';
 import styled from 'styled-components/native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
+  width: 100%;
+
+  padding-bottom: ${getBottomSpace() + 8}px;
+`;
+
+export const Content = styled.View`
   width: 100%;
   padding: 8px;
 
@@ -10,6 +17,22 @@ export const Container = styled.View`
   align-items: center;
 
   padding-bottom: ${getBottomSpace() + 8}px;
+`;
+export const MusicIndicatorContainer = styled.View`
+  width: 100%;
+  height: 4px;
+
+  background: ${darken(0.4, '#fff')};
+`;
+
+export const MusicIndicatorContent = styled.View`
+  width: 30px;
+  height: 100%;
+
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  background: #fff;
 `;
 
 export const MusicContainer = styled.View`
