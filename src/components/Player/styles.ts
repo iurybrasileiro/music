@@ -70,3 +70,7 @@ export const MusicArtistName = styled.Text`
 export const PlayerControls = styled.View`
   flex-direction: row;
 `;
+
+export const ControlButton = styled.TouchableOpacity`
+  margin: 0 4px;
+`;

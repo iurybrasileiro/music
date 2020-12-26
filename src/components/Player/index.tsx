@@ -15,6 +15,7 @@ import {
   MusicName,
   MusicArtistName,
   PlayerControls,
+  ControlButton,
 } from './styles';
 
 const Player: FC = () => {
@@ -34,19 +35,19 @@ const Player: FC = () => {
           </MusicInfo>
         </MusicContainer>
         <PlayerControls>
-          <TouchableOpacity>
+          <ControlButton>
             <Icon name="skip-back" size={30} color={theme.colors.secundary} />
-          </TouchableOpacity>
-          <TouchableOpacity>
+          </ControlButton>
+          <ControlButton>
             <Icon name="pause" size={30} color={theme.colors.secundary} />
-          </TouchableOpacity>
-          <TouchableOpacity>
+          </ControlButton>
+          <ControlButton>
             <Icon
               name="skip-forward"
               size={30}
               color={theme.colors.secundary}
             />
-          </TouchableOpacity>
+          </ControlButton>
         </PlayerControls>
       </Content>
     </Container>
