@@ -10,7 +10,7 @@ const HamburgerButton: FC = () => {
   const theme = useTheme();
 
   const handleOpenDrawer = useCallback(() => {
-    naviagtion.dispatch(DrawerActions.openDrawer());
+    naviagtion.dispatch(DrawerActions.toggleDrawer());
   }, [naviagtion]);
 
   return (
