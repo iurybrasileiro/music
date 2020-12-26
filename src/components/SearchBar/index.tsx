@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, FC } from 'react';
-import Animated, {
+import { TouchableOpacity } from 'react-native';
+import {
   withTiming,
   useSharedValue,
   useAnimatedStyle,
@@ -9,7 +10,6 @@ import Animated, {
 import { useTheme } from 'styled-components';
 import Icon from 'react-native-vector-icons/Feather';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Container, Content, Input } from './styles';
 
 const ICON_WIDTH = 30;

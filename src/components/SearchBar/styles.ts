@@ -9,7 +9,7 @@ export const Container = styled(Animated.View)`
   justify-content: flex-end;
   align-items: center;
 
-  margin-left: 8px;
+  margin: 0px 8px;
 `;
 
 export const Content = styled(Animated.View)`
