@@ -32,14 +32,15 @@ export const MusicInfo = styled.View`
 
 export const MusicName = styled.Text`
   font-size: 20px;
-  font-weight: 500;
+  font-family: 'Montserrat-Bold';
 
   color: ${({ theme }) => theme.colors.secundary};
   margin-bottom: 8px;
 `;
 
 export const MusicArtistName = styled.Text`
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Montserrat-Light';
   color: ${({ theme }) => theme.colors.text.secundary};
 `;
 
