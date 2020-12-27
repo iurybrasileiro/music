@@ -1,18 +1,11 @@
 import React, { useEffect, FC } from 'react';
 import RNBootSplash from 'react-native-bootsplash';
+import AlbumList from '~/components/AlbumList';
 
 import Player from '~/components/Player';
 import strings from '~/global/strings';
 
-import {
-  Container,
-  ListTitle,
-  AlbumsList,
-  AlbumContainer,
-  AlbumImage,
-  AlbumTitle,
-  AlbumArtistName,
-} from './styles';
+import { Container } from './styles';
 
 const Home: FC = () => {
   useEffect(() => {
@@ -24,26 +17,18 @@ const Home: FC = () => {
   return (
     <>
       <Container>
-        <ListTitle>{strings.recommented_for_you}</ListTitle>
-        <AlbumsList
-          data={Array(4).fill('')}
-          renderItem={() => (
-            <AlbumContainer>
-              <AlbumImage />
-              <AlbumTitle>Monsters Go Bump</AlbumTitle>
-              <AlbumArtistName>ERIKA RECINOS</AlbumArtistName>
-            </AlbumContainer>
-          )}
+        <AlbumList
+          title={strings.recommented_for_you}
+          data={Array(4).fill({
+            name: 'Monsters Go Bump',
+            artist: 'ERIKA RECINOS',
+          })}
         />
-        <ListTitle>{strings.my_playlist}</ListTitle>
-        <AlbumsList
-          data={Array(4).fill('')}
-          renderItem={() => (
-            <AlbumContainer>
-              <AlbumImage />
-              <AlbumTitle>Monsters Go Bump</AlbumTitle>
-            </AlbumContainer>
-          )}
+        <AlbumList
+          title={strings.my_playlist}
+          data={Array(4).fill({
+            name: 'Monsters Go Bump',
+          })}
         />
       </Container>
       <Player />
