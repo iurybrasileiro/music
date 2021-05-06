@@ -21,6 +21,7 @@ declare module 'styled-components' {
     };
 
     font: {
+      size: (size: number) => number;
       family: {
         bold: string;
         light: string;

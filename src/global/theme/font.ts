@@ -1,4 +1,7 @@
+import { fontSizePercentage } from '~/utils';
+
 export default {
+  size: (size: number): number => fontSizePercentage(size),
   family: {
     bold: 'Montserrat-Bold',
     light: 'Montserrat-Light',
