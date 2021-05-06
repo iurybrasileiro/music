@@ -1,7 +1,14 @@
 import React from 'react';
 import { Text, TextInput, StyleSheet } from 'react-native';
 
-export const setDefaultFontFamily = () => {
+const styles = StyleSheet.create({
+  defaultText: {
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 18,
+  },
+});
+
+export default () => {
   const oldTextRender = Text.render;
   Text.render = function (...args) {
     const origin = oldTextRender.call(this, ...args);
@@ -18,10 +25,3 @@ export const setDefaultFontFamily = () => {
     });
   };
 };
-
-const styles = StyleSheet.create({
-  defaultText: {
-    fontFamily: 'Montserrat-Regular',
-    fontSize: 18,
-  },
-});
