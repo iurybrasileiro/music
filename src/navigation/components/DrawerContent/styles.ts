@@ -6,8 +6,8 @@ export const Container = styled.View`
   flex: 1;
 
   padding-top: ${Platform.select({
-    android: 0,
-    ios: getStatusBarHeight() + 0,
+    android: 8,
+    ios: getStatusBarHeight() + 8,
   })}px;
 
   background: ${({ theme }) => theme.colors.primary};
