@@ -1,3 +1,5 @@
+import font from './font';
+
 const firefly = '#091227';
 const xumthor = '#EAF0FF';
 const mineShaft = '#343434';
@@ -21,4 +23,6 @@ export default {
       secundary: melrose,
     },
   },
+
+  font,
 };

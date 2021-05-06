@@ -62,7 +62,7 @@ export const MusicInfo = styled.View`
 
 export const MusicName = styled.Text`
   font-size: 20px;
-  font-family: 'Montserrat-Bold';
+  font-family: ${({ theme }) => theme.font.family.bold};
 
   color: ${({ theme }) => theme.colors.secundary};
   margin-bottom: 8px;
@@ -70,7 +70,7 @@ export const MusicName = styled.Text`
 
 export const MusicArtistName = styled.Text`
   font-size: 14px;
-  font-family: 'Montserrat-Light';
+  font-family: ${({ theme }) => theme.font.family.light};
   color: ${({ theme }) => theme.colors.text.secundary};
 `;
 

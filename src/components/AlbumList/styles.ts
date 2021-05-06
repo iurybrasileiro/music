@@ -10,7 +10,7 @@ export const Title = styled.Text`
   margin-bottom: 8px;
 
   font-size: 26px;
-  font-family: 'Montserrat-Bold';
+  font-family: ${({ theme }) => theme.font.family.bold};
   color: ${({ theme }) => theme.colors.text.primary};
 `;
 
@@ -43,12 +43,12 @@ export const AlbumImage = styled.View`
 
 export const AlbumTitle = styled.Text`
   font-size: 14px;
-  font-family: 'Montserrat-Bold';
+  font-family: ${({ theme }) => theme.font.family.bold};
   color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const AlbumArtistName = styled.Text`
   font-size: 12px;
-  font-family: 'Montserrat-Light';
+  font-family: ${({ theme }) => theme.font.family.light};
   color: ${({ theme }) => theme.colors.text.secundary};
 `;
