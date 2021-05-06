@@ -1,10 +1,12 @@
 import React from 'react';
 import { Text, TextInput, StyleSheet } from 'react-native';
 
+import { fontSizePercentage } from './src/utils';
+
 const styles = StyleSheet.create({
   defaultText: {
     fontFamily: 'Montserrat-Regular',
-    fontSize: 18,
+    fontSize: fontSizePercentage(18),
   },
 });
 

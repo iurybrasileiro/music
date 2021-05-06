@@ -25,8 +25,8 @@ export const Input = styled.TextInput.attrs(({ theme }) => ({
   flex: 1;
   height: 50px;
 
-  color: ${({ theme }) => theme.colors.input.color}
-  font-size: 18px;
+  color: ${({ theme }) => theme.colors.input.color};
+  font-size: ${({ theme }) => theme.font.size(18)}px;
 
   border-radius: 4px;
 

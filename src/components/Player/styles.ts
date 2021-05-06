@@ -61,7 +61,7 @@ export const MusicInfo = styled.View`
 `;
 
 export const MusicName = styled.Text`
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.font.size(20)}px;
   font-family: ${({ theme }) => theme.font.family.bold};
 
   color: ${({ theme }) => theme.colors.secundary};
@@ -69,7 +69,7 @@ export const MusicName = styled.Text`
 `;
 
 export const MusicArtistName = styled.Text`
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.font.size(14)}px;
   font-family: ${({ theme }) => theme.font.family.light};
   color: ${({ theme }) => theme.colors.text.secundary};
 `;
