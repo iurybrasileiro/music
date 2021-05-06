@@ -1,13 +1,12 @@
 import React, { useCallback, FC } from 'react';
 import { TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
-import { useTheme } from 'styled-components';
-
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+
+import { Icon } from '~/components';
+import iconHelper from '~/components/Icon/iconHelper';
 
 const HamburgerButton: FC = () => {
   const naviagtion = useNavigation();
-  const theme = useTheme();
 
   const handleOpenDrawer = useCallback(() => {
     naviagtion.dispatch(DrawerActions.toggleDrawer());
@@ -15,7 +14,7 @@ const HamburgerButton: FC = () => {
 
   return (
     <TouchableOpacity onPress={handleOpenDrawer}>
-      <Icon name="menu" size={30} color={theme.colors.secundary} />
+      <Icon name={iconHelper.list} />
     </TouchableOpacity>
   );
 };

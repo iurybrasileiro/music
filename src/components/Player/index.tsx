@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import Icon from 'react-native-vector-icons/Feather';
-import { useTheme } from 'styled-components';
+
+import Icon from '../Icon';
+import iconHelper from '../Icon/iconHelper';
 
 import {
   Container,
@@ -17,8 +18,6 @@ import {
 } from './styles';
 
 const Player: FC = () => {
-  const theme = useTheme();
-
   return (
     <Container>
       <MusicIndicatorContainer>
@@ -34,17 +33,13 @@ const Player: FC = () => {
         </MusicContainer>
         <PlayerControls>
           <ControlButton>
-            <Icon name="skip-back" size={30} color={theme.colors.secundary} />
+            <Icon name={iconHelper.skipBack} />
           </ControlButton>
           <ControlButton>
-            <Icon name="pause" size={30} color={theme.colors.secundary} />
+            <Icon name={iconHelper.pause} />
           </ControlButton>
           <ControlButton>
-            <Icon
-              name="skip-forward"
-              size={30}
-              color={theme.colors.secundary}
-            />
+            <Icon name={iconHelper.skipForward} />
           </ControlButton>
         </PlayerControls>
       </Content>

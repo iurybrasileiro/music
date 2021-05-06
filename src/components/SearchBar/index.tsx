@@ -8,9 +8,10 @@ import {
   interpolateColor,
 } from 'react-native-reanimated';
 import { useTheme } from 'styled-components';
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from '../Icon';
 
 import { Container, Content, Input } from './styles';
+import iconHelper from '../Icon/iconHelper';
 
 const ICON_WIDTH = 30;
 
@@ -51,9 +52,9 @@ const SearchBar: FC = () => {
         <Input placeholder="Pesquise aqui..." />
         <TouchableOpacity activeOpacity={0.6} onPress={handleToggleOpened}>
           {opened ? (
-            <Icon name="search" size={30} color={theme.colors.secundary} />
+            <Icon name={iconHelper.magnifyingGlass} />
           ) : (
-            <Icon name="x" size={30} color={theme.colors.primary} />
+            <Icon name={iconHelper.x} color={theme.colors.primary} />
           )}
         </TouchableOpacity>
       </Content>

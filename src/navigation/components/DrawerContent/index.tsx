@@ -1,6 +1,5 @@
 import React, { useCallback, FC } from 'react';
 import { TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
 import { useTheme } from 'styled-components';
 import { useDispatch } from 'react-redux';
 
@@ -8,10 +7,12 @@ import {
   DrawerContentComponentProps,
   DrawerContentOptions,
 } from '@react-navigation/drawer';
+import { Icon } from '~/components';
 
 import { settingsUpdate } from '~/store/ducks/settings';
 
 import { Container, Header } from './styles';
+import iconHelper from '~/components/Icon/iconHelper';
 
 const DrawerContent: FC<DrawerContentComponentProps<DrawerContentOptions>> = ({
   navigation,
@@ -37,7 +38,7 @@ const DrawerContent: FC<DrawerContentComponentProps<DrawerContentOptions>> = ({
             left: 10,
           }}
         >
-          <Icon name="x" size={30} color={theme.colors.secundary} />
+          <Icon name={iconHelper.x} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={handleToggleTheme}
@@ -48,11 +49,7 @@ const DrawerContent: FC<DrawerContentComponentProps<DrawerContentOptions>> = ({
             left: 10,
           }}
         >
-          <Icon
-            name={theme.title === 'dark' ? 'sun' : 'moon'}
-            size={30}
-            color={theme.colors.secundary}
-          />
+          <Icon name={iconHelper[theme.title === 'dark' ? 'sun' : 'moon']} />
         </TouchableOpacity>
       </Header>
     </Container>
